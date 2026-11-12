@@ -1,4 +1,4 @@
-# AgentBazaar — Architecture & Tech Stack
+# OpenQuote — Architecture & Tech Stack
 
 Related: [Plan](01-plan.md) · [User flow](02-user-flow.md) · [Roles & milestones](04-roles-milestones.md)
 
@@ -87,7 +87,7 @@ flowchart LR
 ## 3. Repository layout
 
 ```
-agentbazaar/
+openquote/
 ├─ app/                         # Next.js App Router
 │  ├─ (auth)/login, signup
 │  ├─ (app)/layout.tsx          # sidebar + canvas shell

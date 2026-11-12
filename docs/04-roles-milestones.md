@@ -1,4 +1,4 @@
-# AgentBazaar — Roles, Tasks & Milestones
+# OpenQuote — Roles, Tasks & Milestones
 
 Related: [Plan](01-plan.md) · [User flow](02-user-flow.md) · [Architecture](03-architecture.md)
 

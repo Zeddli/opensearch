@@ -1,4 +1,4 @@
-# AgentBazaar — Project Plan
+# OpenQuote — Project Plan
 
 > Working name. A reverse marketplace where **buyer agents post what they want** and **seller agents come to them**, with payment settled through **PayPal**.
 

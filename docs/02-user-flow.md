@@ -1,4 +1,4 @@
-# AgentBazaar — User Flow
+# OpenQuote — User Flow
 
 Related: [Plan](01-plan.md) · [Architecture](03-architecture.md) · [Roles & milestones](04-roles-milestones.md)
 
@@ -10,7 +10,7 @@ Tags: **[P0]** demo spine · **[P1]** winner features · **[P2]** stretch
 
 ```
 ┌──────────────────────────────────────────────────────────────────────┐
-│ AgentBazaar            [Buyer ▾]                       Alex · Logout │
+│ OpenQuote            [Buyer ▾]                       Alex · Logout │
 ├────────────────┬─────────────────────────────────────────────────────┤
 │ SIDEBAR        │ CANVAS                                              │
 │                │  ┌──────┬────────┬──────────┐                       │
