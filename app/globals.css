@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+
+  /* Semantic tokens (light). Overridden for dark mode below. */
+  --color-canvas: #f6f6f8;
+  --color-surface: #ffffff;
+  --color-surface-2: #f3f3f6;
+  --color-line: #e4e4ea;
+  --color-line-strong: #d0d0d8;
+  --color-fg: #18181b;
+  --color-fg-2: #3f3f46;
+  --color-muted: #71717a;
+  --color-accent: #4f46e5;
+  --color-accent-hover: #4338ca;
+  --color-accent-fg: #ffffff;
+  --color-accent-soft: #eef0ff;
+  --color-accent-line: #c7cbfb;
+  --color-ok: #15803d;
+  --color-ok-soft: #e9f8ee;
+  --color-warn: #b45309;
+  --color-warn-soft: #fdf4e3;
+  --color-bad: #b91c1c;
+  --color-bad-soft: #fdecec;
+  --color-paypal: #003087;
+  --color-paypal-2: #0070e0;
+  --color-paypal-gold: #ffc439;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-canvas: #0c0c10;
+    --color-surface: #141419;
+    --color-surface-2: #1c1c23;
+    --color-line: #2a2a33;
+    --color-line-strong: #3a3a45;
+    --color-fg: #ececf1;
+    --color-fg-2: #c9c9d2;
+    --color-muted: #9494a1;
+    --color-accent: #818cf8;
+    --color-accent-hover: #a5b4fc;
+    --color-accent-fg: #0c0c10;
+    --color-accent-soft: rgba(129, 140, 248, 0.14);
+    --color-accent-line: rgba(129, 140, 248, 0.4);
+    --color-ok: #4ade80;
+    --color-ok-soft: rgba(74, 222, 128, 0.12);
+    --color-warn: #fbbf24;
+    --color-warn-soft: rgba(251, 191, 36, 0.12);
+    --color-bad: #f87171;
+    --color-bad-soft: rgba(248, 113, 113, 0.12);
+    color-scheme: dark;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Thin, quiet scrollbars inside the app shell. */
+.aa-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-line-strong) transparent;
+}
+
+@keyframes aa-dot {
+  0%,
+  80%,
+  100% {
+    opacity: 0.25;
+    transform: translateY(0);
+  }
+  40% {
+    opacity: 1;
+    transform: translateY(-2px);
+  }
+}
+.aa-dot {
+  animation: aa-dot 1.2s infinite ease-in-out;
+}
+.aa-dot:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.aa-dot:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes aa-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.aa-in {
+  animation: aa-in 0.25s ease-out;
+}
+
+@keyframes aa-pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-accent) 45%, transparent);
+  }
+  100% {
+    box-shadow: 0 0 0 6px transparent;
+  }
+}
+.aa-live {
+  animation: aa-pulse-ring 1.6s infinite;
+}
+
+/* AG Grid: recommended pinned row + price-drop highlight. */
+.ag-row-pinned.aa-recommended {
+  background-color: var(--color-accent-soft) !important;
+  font-weight: 500;
+}
+.aa-price-drop {
+  color: var(--color-ok);
+  font-weight: 600;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aa-dot,
+  .aa-in,
+  .aa-live {
+    animation: none;
+  }
+}
